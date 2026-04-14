@@ -311,11 +311,6 @@
 }
 
 /* Desktop Mode Styles */
-.desktop-mode .board-wrapper {
-  width: auto !important;
-  height: auto !important;
-}
-
 .desktop-mode .swimlane {
   width: auto !important;
   min-width: auto !important;

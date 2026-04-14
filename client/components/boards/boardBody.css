@@ -10,24 +10,6 @@
   min-width: 100%;
 }
 
-/* When zoom is 50% or lower, ensure full width like content */
-.board-wrapper[style*="transform: scale(0.5)"] {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-}
-
-.board-wrapper[style*="transform: scale(0.4)"] {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-}
-
-.board-wrapper[style*="transform: scale(0.3)"] {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-}
 .board-wrapper .board-canvas {
   position: absolute;
   left: 0;
@@ -36,8 +18,6 @@
   bottom: 0;
   transition: margin 0.1s;
   overflow-y: auto;
-  width: 100%;
-  min-width: 100%;
 }
 
 /* Ensure horizontal scrollbar is visible for high zoom levels */
