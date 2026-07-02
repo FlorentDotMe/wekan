@@ -152,31 +152,10 @@ export const Utils = {
     const isMobileMode = body.classList.contains('mobile-mode');
 
     if (boardWrapper) {
-      if (isMobileMode) {
-        // On mobile mode, only apply zoom to text and icons, not the entire layout
-        // Remove any existing transform from board-wrapper
-        boardWrapper.style.transform = '';
-        boardWrapper.style.transformOrigin = '';
-
-        // Apply zoom to text and icon elements instead
-        const textElements = boardWrapper.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, div, .minicard, .list-header-name, .board-header-btn, .fa, .icon');
-        textElements.forEach(element => {
-          element.style.transform = `scale(${level})`;
-          element.style.transformOrigin = 'center';
-        });
-
-        // Reset board-canvas height
-        const boardCanvas = document.querySelector('.board-canvas');
-        if (boardCanvas) {
-          boardCanvas.style.height = '';
-        }
-      } else {
-        // Desktop mode: apply zoom to entire board-wrapper as before
-        boardWrapper.style.transform = `scale(${level})`;
-        boardWrapper.style.transformOrigin = 'top left';
-        boardWrapper.style.width = `${100 / level}%`;
-        boardWrapper.style.height = `${100 / level}%`;
-      }
+      boardWrapper.style.transform = `scale(${level})`;
+      boardWrapper.style.transformOrigin = 'top left';
+      boardWrapper.style.width = `${100 / level}%`;
+      boardWrapper.style.height = `${100 / level}%`;
     }
   },
 

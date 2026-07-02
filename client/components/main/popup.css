@@ -755,15 +755,5 @@ body.mobile-mode .pop-over {
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  max-width: 100vw !important;
-  max-height: 100vh !important;
-}
-body.mobile-mode .pop-over .content-wrapper {
-  width: 100% !important;
-  height: calc(100vh - 48px) !important;
-  max-height: calc(100vh - 48px) !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
+  margin-top: 0 !important;
 }

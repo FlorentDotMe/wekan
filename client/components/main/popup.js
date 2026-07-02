@@ -42,3 +42,16 @@ Popup.template.onRendered(function () {
     },
   };
 });
+
+// To use with:
+// width: {{applyScale(currentUser.profile.zoomLevel)}}%; height: {{applyScale(currentUser.profile.zoomLevel)}}%;
+Popup.template.helpers({
+  applyScale: function(scale) {
+    if ( $('body').hasClass('mobile-mode') ){
+        return "100%";
+    }
+    else {
+        return 100 / scale + "%";
+    }
+  }
+})
